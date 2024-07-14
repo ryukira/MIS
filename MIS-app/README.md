@@ -1,3 +1,56 @@
+##Latar Belakang
+Aplikasi Sistem Informasi Manajemen Klaim (MIS) ini dirancang untuk menyediakan laporan informasi terpadu bagi manajemen PT Jamkrindo. Aplikasi ini akan mendukung pengelolaan klaim berdasarkan lima kategori line of business (LOB): KUR, PEN, Produktif, Konsumtif, dan Suretyship. Data klaim per LOB akan diintegrasikan dengan perusahaan lain melalui database penampungan.
+
+##Informasi Proyek
+##Struktur Database
+1. Database Aplikasi
+    -Menampung data klaim per LOB.
+2. Database Penampungan
+    -Menyimpan rekap data klaim yang diintegrasikan.
+##Tabel di Database Aplikasi
+    -Tabel klaim_per_lob
+    --id (INT, Primary Key)
+    --lob (VARCHAR)
+    --penyebab_klaim (VARCHAR)
+    --periode (DATE)
+    --nilai_beban_klaim (DECIMAL)
+##Tabel di Database Penampungan
+    --Tabel rekap_klaim
+    --id (INT, Primary Key)
+    --lob (VARCHAR)
+    --penyebab_klaim (VARCHAR)
+    --periode (DATE)
+    --nilai_beban_klaim (DECIMAL)
+   
+##Fitur Aplikasi
+Interface: Menampilkan data klaim per LOB dari file Excel.
+Fungsi Pengiriman Data: Mengirim data klaim untuk LOB KUR dan PEN ke database penampungan melalui API.
+Log Aktivitas Pengiriman: Mencatat tanggal proses pengiriman, jumlah data yang dikirim, status pengiriman, dan informasi relevan lainnya.
+Unit Testing: Pengujian unit dilakukan untuk memastikan fungsi aplikasi berjalan dengan baik.
+
+##Teknologi
+Framework: PHP (Laravel)
+
+##Instalasi
+Clone repository ini ke lokal Anda.
+PHP dan Composer (untuk PHP).
+Buat database sesuai dengan struktur yang telah ditentukan.
+Konfigurasi koneksi database dalam file konfigurasi aplikasi.
+Jalankan aplikasi dengan perintah sesuai framework yang dipilih.
+
+##Pengujian
+Lakukan pengujian unit pada setiap komponen aplikasi untuk memastikan semua fungsi berjalan dengan baik dan sesuai harapan.
+
+##Kontribusi
+Jika Anda ingin berkontribusi pada proyek ini, silakan buat pull request atau buka issue untuk diskusi lebih lanjut.
+
+##Lisensi
+Proyek ini dilisensikan di bawah MIT License.
+
+##Kontak
+Jika ada pertanyaan lebih lanjut, silakan hubungi [rullyriel@gmail.com].
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
